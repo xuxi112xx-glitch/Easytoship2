@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --tech-blue: #3b82f6; --asset-gold: #fbbf24; --industrial-dark: #07090d; }
+        :root { --tech-blue: #3b82f6; --asset-gold: #fbbf24; --industrial-dark: #07090d; --customs-purple: #8b5cf6; }
         body { 
             font-family: 'Inter', 'Noto Sans SC', sans-serif; 
             background-color: var(--industrial-dark); 
@@ -46,6 +46,11 @@
         }
         .text-gradient-gold { 
             background: linear-gradient(135deg, #fcd34d, #fbbf24); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .text-gradient-purple { 
+            background: linear-gradient(135deg, #a78bfa, #8b5cf6); 
             -webkit-background-clip: text; 
             -webkit-text-fill-color: transparent; 
         }
@@ -150,6 +155,7 @@
             <!-- Навигация для десктопа -->
             <div class="hidden md:flex items-center space-x-6 lg:space-x-10 text-xs font-bold uppercase tracking-widest">
                 <a href="#services" class="hover:text-blue-400 px-2 py-1">Основные услуги</a>
+                <a href="#customs-detail" class="hover:text-purple-400 text-gradient-purple px-2 py-1">Белая таможня</a>
                 <a href="#warehouse-detail" class="hover:text-blue-400 px-2 py-1">Склад в Москве</a>
                 <a href="#financial-detail" class="hover:text-amber-400 text-gradient-gold px-2 py-1">RUB / USDT обмен</a>
                 <a href="https://t.me/easytoship" target="_blank" class="px-4 md:px-6 py-2 md:py-2.5 rounded-full btn-tg text-white text-xs md:text-sm whitespace-nowrap">
@@ -162,6 +168,7 @@
         <div id="mobileMenu" class="mobile-menu md:hidden">
             <div class="flex flex-col p-6 space-y-4">
                 <a href="#services" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Основные услуги</a>
+                <a href="#customs-detail" class="text-gradient-purple py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Белая таможня</a>
                 <a href="#warehouse-detail" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Склад в Москве</a>
                 <a href="#financial-detail" class="text-gradient-gold py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">RUB / USDT обмен</a>
                 <a href="https://t.me/easytoship" target="_blank" class="btn-tg text-white py-3 px-4 rounded-lg text-center mt-4" onclick="toggleMobileMenu()">
@@ -205,7 +212,7 @@
                 </div>
                 <p class="text-slate-500 italic text-sm md:text-sm">* Мы занимаемся закупкой и логистикой в Китае, вы фокусируетесь на продажах в России</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8 group-hover:bg-blue-600 transition-colors">
                         <i class="fas fa-plane text-xl md:text-2xl text-blue-500 group-hover:text-white"></i>
@@ -230,7 +237,17 @@
                         <i class="fas fa-copy"></i> Запрос на закупку
                     </button>
                 </div>
-                <div id="warehouse" class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group">
+                <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group border-t-2 border-t-purple-500 flex flex-col">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-purple-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8 group-hover:bg-purple-600 transition-colors">
+                        <i class="fas fa-passport text-xl md:text-2xl text-purple-500 group-hover:text-white"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">Белая таможня + налоги включены</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4 md:mb-6 flex-grow">Полное таможенное оформление по «белой схеме»: двойное очищение (Китай и Россия), все пошлины и налоги уже включены в стоимость. Вы получаете полностью легальный груз без скрытых платежей.</p>
+                    <button onclick="copyCustomsTemplate()" class="mt-auto w-full px-4 py-3 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-purple-500/30">
+                        <i class="fas fa-file-contract"></i> Запросить расчет «под ключ»
+                    </button>
+                </div>
+                <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8">
                         <i class="fas fa-box-open text-xl md:text-2xl text-blue-500"></i>
                     </div>
@@ -241,32 +258,142 @@
         </div>
     </section>
     
+    <section id="customs-detail" class="py-16 md:py-32 px-4 sm:px-6 bg-gradient-to-r from-slate-900 to-purple-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card p-8 md:p-12 rounded-3xl border border-purple-500/30">
+                <div class="text-center mb-10 md:mb-16">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-600/20 border border-purple-500/30 text-purple-300 text-xs md:text-sm font-bold mb-4 md:mb-6 tracking-widest uppercase">Премиум сервис</div>
+                    <h2 class="text-3xl md:text-5xl font-black mb-6 text-white">✅ Белая таможня + двойное очищение + налоги включены</h2>
+                    <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                        Мы работаем только по легальным схемам. Все грузы проходят полное таможенное оформление в Китае и России. В стоимость доставки уже включены все налоги и пошлины — никаких скрытых платежей.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 mb-12 md:mb-16">
+                    <div class="p-6 bg-black/30 rounded-xl border border-purple-500/20">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-xl text-green-400"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2 text-lg">Легальность</h4>
+                        <p class="text-sm text-slate-400">Все документы оформляются официально. Полная прозрачность всех платежей и процедур.</p>
+                    </div>
+                    <div class="p-6 bg-black/30 rounded-xl border border-purple-500/20">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-xl text-blue-400"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2 text-lg">Без рисков</h4>
+                        <p class="text-sm text-slate-400">Налоги и пошлины уже включены в стоимость. Никаких дополнительных платежей при получении груза.</p>
+                    </div>
+                    <div class="p-6 bg-black/30 rounded-xl border border-purple-500/20">
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-xl flex items-center justify-center mb-4">
+                            <i class="fas fa-truck-loading text-xl text-amber-400"></i>
+                        </div>
+                        <h4 class="font-bold text-white mb-2 text-lg">Под ключ</h4>
+                        <p class="text-sm text-slate-400">От склада в Китае до склада в Москве. Вы получаете готовый к реализации товар без лишних хлопот.</p>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="p-6 bg-purple-900/20 rounded-xl">
+                        <h4 class="font-bold text-white mb-4 text-lg flex items-center gap-2">
+                            <i class="fas fa-flag text-purple-400"></i>
+                            Очищение в Китае
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span class="text-slate-300 text-sm">Подготовка полного пакета экспортных документов</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span class="text-slate-300 text-sm">Таможенное оформление по китайскому законодательству</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span class="text-slate-300 text-sm">Уплата всех необходимых экспортных пошлин и сборов</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-purple-900/20 rounded-xl">
+                        <h4 class="font-bold text-white mb-4 text-lg flex items-center gap-2">
+                            <i class="fas fa-flag text-red-400"></i>
+                            Очищение в России
+                        </h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span class="text-slate-300 text-sm">Полное таможенное оформление на территории РФ</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span class="text-slate-300 text-sm">Уплата НДС, таможенных пошлин и всех сборов</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i class="fas fa-check text-green-400 mt-1"></i>
+                                <span class="text-slate-300 text-sm">Получение всех разрешительных документов для реализации товара</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="https://t.me/easytoship" target="_blank" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-xl font-bold text-lg inline-flex items-center justify-center gap-3">
+                        <i class="fab fa-telegram-plane"></i> Получить детальный расчет «под ключ»
+                    </a>
+                    <p class="text-slate-500 text-sm mt-4">* Вся стоимость услуг фиксируется в договоре, никаких скрытых платежей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="warehouse-detail" class="py-16 md:py-32 px-4 sm:px-6 relative bg-gradient-to-b from-slate-900 to-blue-950">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-7xl mx-auto text-center">
             <div class="glass-card p-6 md:p-12 rounded-2xl md:rounded-3xl border border-blue-500/20 backdrop-blur-sm">
                 <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6 md:mb-8 border border-blue-500/30">
                     <i class="fas fa-map-marker-alt text-2xl md:text-3xl text-blue-400"></i>
                 </div>
                 <h3 class="text-2xl md:text-5xl font-black mb-4 md:mb-6 text-white">Услуги склада в Москве</h3>
                 <p class="text-lg md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed">После прибытия вашего груза в Москву мы обеспечиваем четкое уведомление и краткосрочное хранение.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 my-8 md:my-12">
-                    <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl">
-                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">Проверка и фото</div>
-                        <div class="font-bold text-white mb-1 md:mb-2">Уведомление при прибытии</div>
-                        <div class="text-xs md:text-sm text-slate-400">После размещения на складе сразу фотографируем и сообщаем вам — полная прозрачность.</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 my-8 md:my-12">
+                    <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-center mb-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center">
+                                <i class="fas fa-camera text-blue-400"></i>
+                            </div>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-blue-400 mb-2">Проверка и фото</div>
+                        <div class="font-bold text-white mb-2 text-sm md:text-base">Уведомление при прибытии</div>
+                        <div class="text-xs md:text-sm text-slate-400 leading-relaxed">После размещения на складе сразу фотографируем и сообщаем вам — полная прозрачность.</div>
                     </div>
-                    <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl">
-                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">7 дней хранения</div>
-                        <div class="font-bold text-white mb-1 md:mb-2">Бесплатный временный склад</div>
-                        <div class="text-xs md:text-sm text-slate-400">7 дней бесплатного хранения для удобного самовывоза или переотправки.</div>
+                    <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-center mb-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center">
+                                <i class="fas fa-calendar-alt text-blue-400"></i>
+                            </div>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-blue-400 mb-2">7 дней хранения</div>
+                        <div class="font-bold text-white mb-2 text-sm md:text-base">Бесплатный временный склад</div>
+                        <div class="text-xs md:text-sm text-slate-400 leading-relaxed">7 дней бесплатного хранения для удобного самовывоза или переотправки.</div>
                     </div>
-                    <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl">
-                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">Самовывоз/распределение</div>
-                        <div class="font-bold text-white mb-1 md:mb-2">Гибкая обработка грузов</div>
-                        <div class="text-xs md:text-sm text-slate-400">Вы можете забрать груз самостоятельно или поручить нам помощь с местной логистикой.</div>
+                    <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl border border-blue-500/20 hover:border-blue-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-center mb-3">
+                            <div class="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center">
+                                <i class="fas fa-truck-loading text-blue-400"></i>
+                            </div>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-blue-400 mb-2">Самовывоз/распределение</div>
+                        <div class="font-bold text-white mb-2 text-sm md:text-base">Гибкая обработка грузов</div>
+                        <div class="text-xs md:text-sm text-slate-400 leading-relaxed">Вы можете забрать груз самостоятельно или поручить нам помощь с местной логистикой.</div>
+                    </div>
+                    <div class="p-4 md:p-6 bg-purple-900/30 rounded-xl border border-purple-500/20 hover:border-purple-500/50 transition-all duration-300">
+                        <div class="flex items-center justify-center mb-3">
+                            <div class="w-12 h-12 rounded-full bg-purple-600/20 flex items-center justify-center">
+                                <i class="fas fa-file-contract text-purple-400"></i>
+                            </div>
+                        </div>
+                        <div class="text-xl md:text-2xl font-bold text-purple-400 mb-2">Белая таможня + налоги</div>
+                        <div class="font-bold text-white mb-2 text-sm md:text-base">Полное таможенное оформление</div>
+                        <div class="text-xs md:text-sm text-slate-400 leading-relaxed">Легальное оформление в Китае и России, все налоги и пошлины включены. Груз прибывает на склад полностью очищенным.</div>
                     </div>
                 </div>
-                <a href="https://t.me/easytoship" target="_blank" class="inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 btn-tg text-white rounded-xl font-bold text-base md:text-lg w-full">
+                <a href="https://t.me/easytoship" target="_blank" class="inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 btn-tg text-white rounded-xl font-bold text-base md:text-lg w-full max-w-md mx-auto">
                     <i class="fab fa-telegram-plane"></i> Получить адрес склада в Москве
                 </a>
             </div>
@@ -354,6 +481,10 @@
                             <span class="text-slate-400">Обмен наличных рублей на USDT</span>
                         </li>
                         <li>
+                            <span class="text-purple-500 font-bold block mb-1">Белая таможня</span>
+                            <span class="text-slate-400">Двойное очищение, все налоги включены</span>
+                        </li>
+                        <li>
                             <span class="text-blue-500 font-bold block mb-1">Московский склад</span>
                             <span class="text-slate-400">Временное хранение грузов и пункт самовывоза</span>
                         </li>
@@ -371,7 +502,7 @@
                     </div>
                 </div>
                 <div class="flex-1 max-w-md w-full mb-4 md:mb-0">
-                    <input id="copyTpl" type="text" readonly value="Потребность: [логистика/закупка+логистика] | Груз: | Вес(кг): | Размеры упаковки(Д*Ш*В см): | Способ доставки: [авиа/авто]" class="w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm text-slate-300 font-mono outline-none">
+                    <input id="copyTpl" type="text" readonly value="Потребность: [логистика/закупка+логистика/белая таможня] | Груз: | Вес(кг): | Размеры упаковки(Д*Ш*В см): | Способ доставки: [авиа/авто]" class="w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm text-slate-300 font-mono outline-none">
                 </div>
                 <button onclick="copyAndInquire()" class="px-4 py-3 md:px-8 md:py-3 btn-tg rounded-lg text-xs font-bold text-white whitespace-nowrap uppercase hover:shadow-lg hover:shadow-blue-500/30 transition-shadow w-full md:w-auto">Скопировать шаблон и запросить расчет</button>
             </div>
@@ -379,6 +510,7 @@
                 <p>© 2023 easytoship. Все права защищены.</p>
                 <div class="flex gap-4 md:gap-8">
                     <span class="text-blue-900">Шэньчжэнь</span>
+                    <span class="text-purple-900">Белая таможня</span>
                     <span class="text-blue-900">Гонконг</span>
                     <span class="text-blue-900">Москва</span>
                 </div>
@@ -436,7 +568,25 @@
             const template = '【Запрос на закупку】\nТовар: \nКоличество: \nЦелевая модель/спецификация(опционально): ';
             navigator.clipboard.writeText(template).then(() => {
                 // Показать уведомление
-                showCopyNotification('Шаблон скопирован! Открываем Telegram...');
+                showCopyNotification('Шаблон закупки скопирован! Открываем Telegram...');
+                
+                // Небольшая задержка перед открытием Telegram
+                setTimeout(() => {
+                    window.open('https://t.me/easytoship', '_blank');
+                }, 800);
+            }).catch(err => {
+                console.error('Ошибка копирования: ', err);
+                // Если копирование не удалось, все равно открываем Telegram
+                window.open('https://t.me/easytoship', '_blank');
+            });
+        }
+        
+        // Копирование шаблона для таможенного оформления
+        function copyCustomsTemplate() {
+            const template = '【Запрос на расчет «белая таможня»】\nТовар: \nКоличество: \nВес(кг): \nСтоимость товара($): \nСпособ доставки: [авиа/авто] ';
+            navigator.clipboard.writeText(template).then(() => {
+                // Показать уведомление
+                showCopyNotification('Шаблон для расчета таможни скопирован! Открываем Telegram...');
                 
                 // Небольшая задержка перед открытием Telegram
                 setTimeout(() => {
