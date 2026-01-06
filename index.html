@@ -69,20 +69,29 @@
             animation: pulse-gold 2s infinite; 
         }
         
+        /* 动画提示 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate(-50%, 10px);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+        
         /* 移动端优化 */
         @media (max-width: 768px) {
-            /* 移除不必要的手势 */
             html, body {
                 overflow-x: hidden;
                 touch-action: pan-y;
             }
             
-            /* 导航栏优化 */
             nav {
                 height: 60px;
             }
             
-            /* 汉堡菜单 */
             .hamburger-menu {
                 display: flex;
             }
@@ -103,7 +112,6 @@
                 display: block;
             }
             
-            /* 确保所有交互元素至少44x44px */
             button, 
             a.btn-tg,
             input,
@@ -115,14 +123,14 @@
     </style>
 </head>
 <body class="bg-grid">
-    <!-- 移动端汉堡菜单按钮 -->
+    <!-- 移动端菜单按钮 -->
     <button id="mobileMenuBtn" class="md:hidden fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-slate-900/90 backdrop-blur-md border border-white/10 flex items-center justify-center">
         <i class="fas fa-bars text-white"></i>
     </button>
 
     <nav class="fixed w-full z-40 border-b border-white/5 bg-slate-950/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
-            <!-- Logo 与 品牌文字 -->
+            <!-- Logo 与品牌 -->
             <div class="flex items-center space-x-2 md:space-x-3">
                 <img src="https://sc04.alicdn.com/kf/Ae6d00c45975e47aa8b7627d25bbbe44c0/268016592/Ae6d00c45975e47aa8b7627d25bbbe44c0.png"
                      alt="easytoship"
@@ -158,7 +166,7 @@
         <div class="absolute inset-0 z-0 opacity-20">
             <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1600" 
                  class="w-full h-full object-cover" 
-                 alt="跨境重卡车队">
+                 alt="跨境物流运输">
         </div>
         <div class="max-w-7xl mx-auto w-full relative z-10">
             <div class="max-w-3xl px-4">
@@ -208,7 +216,7 @@
                         <i class="fas fa-shopping-cart text-xl md:text-2xl text-green-500 group-hover:text-white"></i>
                     </div>
                     <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">中国代采购</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4 md:mb-6 flex-grow">我们熟悉的供应商提供优势价格的电子产品：<br><span class="text-green-400 font-semibold">显卡、内存条、笔记本电脑、DJI相机</span>等。我们验货后直接安排物流。</p>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4 md:mb-6 flex-grow">我们熟悉的供应商提供优势价格的电子产品：<br><span class="text-green-400 font-semibold">显卡、内存条、笔记本、DJI相机</span>等。我们验货后直接安排物流。</p>
                     <button onclick="copyTemplate()" class="mt-auto w-full px-4 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-green-500/30">
                         <i class="fas fa-copy"></i> 一键代采询价
                     </button>
@@ -250,7 +258,7 @@
                     </div>
                 </div>
                 <a href="https://t.me/easytoship" target="_blank" class="inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 btn-tg text-white rounded-xl font-bold text-base md:text-lg w-full">
-                    <i class="fab fa-telegram-plane"></i> 获取莫斯科仓库地址
+                    <i class="fab fa-telegram-plane"></i> 获取莫斯科仓库具体地址
                 </a>
             </div>
         </div>
@@ -269,7 +277,7 @@
                         <li class="flex items-start gap-3"><i class="fas fa-user-tie text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">可安排线下见面交易，安全直接</span></li>
                     </ul>
                     <a href="https://t.me/easytoship" target="_blank" class="px-6 py-4 md:px-10 md:py-5 btn-tg text-white rounded-xl font-bold text-base md:text-lg flex items-center justify-center gap-3 w-full">
-                        <i class="fab fa-telegram-plane"></i> 查询卢布兑USDT汇率
+                        <i class="fab fa-telegram-plane"></i> 查询今日卢布兑USDT汇率
                     </a>
                 </div>
                 <div class="order-1 lg:order-2 flex justify-center mb-8 md:mb-0">
@@ -285,7 +293,7 @@
                             </div>
                             <div class="flex items-center gap-3 md:gap-4">
                                 <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm md:text-base">2</div>
-                                <div><div class="font-bold text-white text-sm md:text-base">兑换与支付</div><div class="text-xs md:text-sm text-slate-400">按约定汇率支付卢布，我们接收后即确认支付完成。</div></div>
+                                <div><div class="font-bold text-white text-sm md:text-base">兑换与支付</div><div class="text-xs md:text-sm text-slate-400">按约定汇率支付美元/USDT，我们接收后即确认支付完成。</div></div>
                             </div>
                             <div class="flex items-center gap-3 md:gap-4">
                                 <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm md:text-base">3</div>
@@ -302,7 +310,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="grid lg:grid-cols-4 gap-8 md:gap-16 mb-12 md:mb-20">
                 <div class="col-span-1 lg:col-span-2 space-y-6 md:space-y-8">
-                    <!-- 底部 Logo 与 品牌文字 -->
+                    <!-- 底部 Logo 与品牌 -->
                     <div class="flex items-center space-x-2 md:space-x-3">
                         <img src="https://sc04.alicdn.com/kf/Ae6d00c45975e47aa8b7627d25bbbe44c0/268016592/Ae6d00c45975e47aa8b7627d25bbbe44c0.png"
                              alt="easytoship"
@@ -350,7 +358,7 @@
                     </div>
                     <div>
                         <div class="font-bold text-xs md:text-sm text-white">快速询价模板</div>
-                        <div class="text-[9px] md:text-[10px] text-slate-500 uppercase tracking-tighter">复制以下信息联系我们</div>
+                        <div class="text-[9px] md:text-[10px] text-slate-500 uppercase tracking-tighter">复制以下信息联系我们，获取精确报价</div>
                     </div>
                 </div>
                 <div class="flex-1 max-w-md w-full mb-4 md:mb-0">
@@ -391,10 +399,43 @@
             }
         });
         
+        // 显示复制提示
+        function showCopyNotification(message) {
+            // 创建提示元素
+            const notification = document.createElement('div');
+            notification.id = 'copy-notification';
+            notification.innerHTML = `
+                <div class="fixed top-24 left-1/2 transform -translate-x-1/2 z-50 flex items-center gap-2 px-4 py-3 bg-green-600/90 backdrop-blur-md text-white rounded-lg shadow-lg border border-green-400/30" style="animation: fadeInUp 0.3s ease-out forwards;">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="font-bold text-sm">${message}</span>
+                </div>
+            `;
+            
+            // 添加提示到页面
+            document.body.appendChild(notification);
+            
+            // 1.5秒后移除提示
+            setTimeout(() => {
+                if (document.getElementById('copy-notification')) {
+                    document.getElementById('copy-notification').remove();
+                }
+            }, 1500);
+        }
+        
         // 复制代采模板
         function copyTemplate() {
             const template = '【代采询价】\n产品: \n数量: \n目标型号/规格(可选): ';
             navigator.clipboard.writeText(template).then(() => {
+                // 显示提示
+                showCopyNotification('模板已复制！正在打开Telegram...');
+                
+                // 短暂延迟后打开Telegram
+                setTimeout(() => {
+                    window.open('https://t.me/easytoship', '_blank');
+                }, 800);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+                // 如果复制失败，仍然打开Telegram
                 window.open('https://t.me/easytoship', '_blank');
             });
         }
@@ -403,11 +444,21 @@
         function copyAndInquire() {
             const input = document.getElementById('copyTpl');
             navigator.clipboard.writeText(input.value).then(() => {
+                // 显示提示
+                showCopyNotification('模板已复制！正在打开Telegram...');
+                
+                // 短暂延迟后打开Telegram
+                setTimeout(() => {
+                    window.open('https://t.me/easytoship', '_blank');
+                }, 800);
+            }).catch(err => {
+                console.error('复制失败: ', err);
+                // 如果复制失败，仍然打开Telegram
                 window.open('https://t.me/easytoship', '_blank');
             });
         }
         
-        // 防止缩放
+        // 防止手势缩放
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
         });
