@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN" class="scroll-smooth">
+<html lang="ru" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>easytoship | 中国到莫斯科物流专线 · 莫斯科收货仓 · USDT支付</title>
+    <title>easytoship | Логистика из Китая в Москву · Склад в Москве · Оплата USDT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -69,7 +69,7 @@
             animation: pulse-gold 2s infinite; 
         }
         
-        /* 动画提示 */
+        /* Анимация для уведомления */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -81,7 +81,7 @@
             }
         }
         
-        /* 移动端优化 */
+        /* Мобильная оптимизация */
         @media (max-width: 768px) {
             html, body {
                 overflow-x: hidden;
@@ -123,14 +123,14 @@
     </style>
 </head>
 <body class="bg-grid">
-    <!-- 移动端菜单按钮 -->
+    <!-- Кнопка меню для мобильных -->
     <button id="mobileMenuBtn" class="md:hidden fixed top-4 right-4 z-50 w-12 h-12 rounded-full bg-slate-900/90 backdrop-blur-md border border-white/10 flex items-center justify-center">
         <i class="fas fa-bars text-white"></i>
     </button>
 
     <nav class="fixed w-full z-40 border-b border-white/5 bg-slate-950/90 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 md:h-20 flex items-center justify-between">
-            <!-- Logo 与品牌 -->
+            <!-- Логотип и название -->
             <div class="flex items-center space-x-2 md:space-x-3">
                 <img src="https://sc04.alicdn.com/kf/Ae6d00c45975e47aa8b7627d25bbbe44c0/268016592/Ae6d00c45975e47aa8b7627d25bbbe44c0.png"
                      alt="easytoship"
@@ -138,25 +138,25 @@
                 <span class="text-xl md:text-2xl font-black italic tracking-tighter uppercase text-white">easy<span class="text-blue-500">to</span>ship</span>
             </div>
             
-            <!-- 桌面端导航 -->
+            <!-- Навигация для десктопа -->
             <div class="hidden md:flex items-center space-x-6 lg:space-x-10 text-xs font-bold uppercase tracking-widest">
-                <a href="#services" class="hover:text-blue-400 px-2 py-1">核心业务</a>
-                <a href="#warehouse" class="hover:text-blue-400 px-2 py-1">莫斯科仓库</a>
-                <a href="#financial-detail" class="hover:text-amber-400 text-gradient-gold px-2 py-1">RUB / USDT 对换</a>
+                <a href="#services" class="hover:text-blue-400 px-2 py-1">Основные услуги</a>
+                <a href="#warehouse" class="hover:text-blue-400 px-2 py-1">Склад в Москве</a>
+                <a href="#financial-detail" class="hover:text-amber-400 text-gradient-gold px-2 py-1">RUB / USDT обмен</a>
                 <a href="https://t.me/easytoship" target="_blank" class="px-4 md:px-6 py-2 md:py-2.5 rounded-full btn-tg text-white text-xs md:text-sm whitespace-nowrap">
-                    联系 @easytoship
+                    Связаться @easytoship
                 </a>
             </div>
         </div>
         
-        <!-- 移动端菜单 -->
+        <!-- Мобильное меню -->
         <div id="mobileMenu" class="mobile-menu md:hidden">
             <div class="flex flex-col p-6 space-y-4">
-                <a href="#services" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">核心业务</a>
-                <a href="#warehouse" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">莫斯科仓库</a>
-                <a href="#financial-detail" class="text-gradient-gold py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">RUB / USDT 对换</a>
+                <a href="#services" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Основные услуги</a>
+                <a href="#warehouse" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Склад в Москве</a>
+                <a href="#financial-detail" class="text-gradient-gold py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">RUB / USDT обмен</a>
                 <a href="https://t.me/easytoship" target="_blank" class="btn-tg text-white py-3 px-4 rounded-lg text-center mt-4" onclick="toggleMobileMenu()">
-                    联系 @easytoship <i class="fab fa-telegram-plane ml-2"></i>
+                    Связаться @easytoship <i class="fab fa-telegram-plane ml-2"></i>
                 </a>
             </div>
         </div>
@@ -166,21 +166,21 @@
         <div class="absolute inset-0 z-0 opacity-20">
             <img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1600" 
                  class="w-full h-full object-cover" 
-                 alt="跨境物流运输">
+                 alt="Международные грузовые перевозки">
         </div>
         <div class="max-w-7xl mx-auto w-full relative z-10">
             <div class="max-w-3xl px-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs md:text-[10px] font-bold mb-4 md:mb-6 tracking-widest uppercase">专注中国到莫斯科物流</div>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 leading-tight text-white">直达莫斯科<br>靠谱的物流专线</h1>
-                <p class="text-slate-300 text-lg sm:text-xl md:text-2xl font-light mb-6 md:mb-10 max-w-xl border-l-4 border-amber-500 pl-4 md:pl-6 leading-relaxed">空运、陆运可选，<span class="font-bold text-white">门到仓</span>服务清晰透明。</p>
-                <p class="text-slate-400 text-base md:text-lg mb-8 md:mb-10 max-w-2xl leading-relaxed">我们从深圳/香港仓库收货，直接运送到莫斯科收货仓。提供稳定线路，并支持在莫斯科用卢布现金兑换 USDT 支付运费。</p>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-300 text-xs md:text-[10px] font-bold mb-4 md:mb-6 tracking-widest uppercase">Специализируемся на логистике Китай-Москва</div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 md:mb-6 leading-tight text-white">Прямые грузоперевозки<br>в Москву</h1>
+                <p class="text-slate-300 text-lg sm:text-xl md:text-2xl font-light mb-6 md:mb-10 max-w-xl border-l-4 border-amber-500 pl-4 md:pl-6 leading-relaxed">Авиа и авто доставка, <span class="font-bold text-white">от двери до склада</span> — прозрачные условия.</p>
+                <p class="text-slate-400 text-base md:text-lg mb-8 md:mb-10 max-w-2xl leading-relaxed">Мы забираем грузы со складов в Шэньчжэне/Гонконге и доставляем напрямую на наш склад в Москве. Стабильные маршруты и возможность оплаты в рублях наличными с конвертацией в USDT.</p>
                 <div class="flex flex-col sm:flex-row gap-4 md:gap-5">
                     <a href="https://t.me/easytoship" target="_blank" class="px-6 py-4 md:px-10 md:py-5 btn-tg text-white rounded-xl font-bold text-base md:text-lg flex items-center justify-center gap-3">
-                        获取最新运价 <i class="fab fa-telegram-plane"></i>
+                        Узнать актуальные тарифы <i class="fab fa-telegram-plane"></i>
                     </a>
                     <div class="flex items-center justify-center gap-3 px-4 py-3 glass-card rounded-xl animate-gold border-amber-500/30">
                         <i class="fas fa-coins text-amber-500 text-lg md:text-xl"></i>
-                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">莫斯科支持 USDT 支付</span>
+                        <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Оплата USDT в Москве</span>
                     </div>
                 </div>
             </div>
@@ -191,42 +191,42 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-16 gap-4 md:gap-6">
                 <div class="mb-4 md:mb-0">
-                    <h2 class="text-blue-400 font-bold tracking-widest text-sm mb-2 md:mb-4 uppercase">我们的服务</h2>
-                    <h3 class="text-2xl md:text-4xl font-bold text-white">从采购到送达莫斯科，一站式解决</h3>
+                    <h2 class="text-blue-400 font-bold tracking-widest text-sm mb-2 md:mb-4 uppercase">Наши услуги</h2>
+                    <h3 class="text-2xl md:text-4xl font-bold text-white">От закупки до доставки в Москву — полный цикл</h3>
                 </div>
-                <p class="text-slate-500 italic text-sm md:text-sm">* 我们负责中国端的采购与物流，您专注俄罗斯市场销售</p>
+                <p class="text-slate-500 italic text-sm md:text-sm">* Мы занимаемся закупкой и логистикой в Китае, вы фокусируетесь на продажах в России</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                 <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8 group-hover:bg-blue-600 transition-colors">
                         <i class="fas fa-plane text-xl md:text-2xl text-blue-500 group-hover:text-white"></i>
                     </div>
-                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">空运专线 (快)</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed">从香港机场直飞莫斯科，适合小件、高价值或紧急货物，门到仓运输，时效优先。</p>
+                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">Авиадоставка (быстро)</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">Прямые рейсы из Гонконга в Москву. Для небольших, ценных или срочных грузов. От двери до склада, приоритет — скорость.</p>
                 </div>
                 <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8 group-hover:bg-blue-600 transition-colors">
                         <i class="fas fa-truck-moving text-xl md:text-2xl text-blue-500 group-hover:text-white"></i>
                     </div>
-                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">陆运专线 (省)</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed">通过陆路口岸运输，成本优势大，适合大货、重货及常规补货，提供稳定仓到仓服务。</p>
+                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">Автодоставка (экономично)</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">Доставка через наземные переходы. Большие объемы, тяжелые и регулярные грузы. Стабильная услуга от склада до склада.</p>
                 </div>
                 <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group border-t-2 border-t-green-500 flex flex-col">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-green-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8 group-hover:bg-green-600 transition-colors">
                         <i class="fas fa-shopping-cart text-xl md:text-2xl text-green-500 group-hover:text-white"></i>
                     </div>
-                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">中国代采购</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4 md:mb-6 flex-grow">我们熟悉的供应商提供优势价格的电子产品：<br><span class="text-green-400 font-semibold">显卡、内存条、笔记本电脑、DJI相机</span>等。我们验货后直接安排物流。</p>
+                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">Закупка в Китае</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4 md:mb-6 flex-grow">Наши проверенные поставщики предлагают выгодные цены на электронику: <br><span class="text-green-400 font-semibold">видеокарты, планки ОЗУ, ноутбуки, камеры DJI</span> и др. Проверяем товар и сразу организуем доставку.</p>
                     <button onclick="copyTemplate()" class="mt-auto w-full px-4 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-green-500/30">
-                        <i class="fas fa-copy"></i> 一键代采询价
+                        <i class="fas fa-copy"></i> Запрос на закупку
                     </button>
                 </div>
                 <div id="warehouse" class="glass-card p-6 md:p-10 rounded-2xl md:rounded-[2rem] group">
                     <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-600/10 rounded-2xl flex items-center justify-center mb-4 md:mb-8">
                         <i class="fas fa-box-open text-xl md:text-2xl text-blue-500"></i>
                     </div>
-                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">莫斯科收货仓</h4>
-                    <p class="text-slate-300 text-sm leading-relaxed">货物抵达后，核对、拍照通知，并提供7天免费存放，方便您自提或安排下一步本地分发。</p>
+                    <h4 class="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white">Склад в Москве</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">По прибытии груза проверяем, фотографируем и уведомляем вас. 7 дней бесплатного хранения для самовывоза или дальнейшей дистрибуции.</p>
                 </div>
             </div>
         </div>
@@ -238,27 +238,27 @@
                 <div class="w-16 h-16 md:w-20 md:h-20 mx-auto bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6 md:mb-8 border border-blue-500/30">
                     <i class="fas fa-map-marker-alt text-2xl md:text-3xl text-blue-400"></i>
                 </div>
-                <h3 class="text-2xl md:text-5xl font-black mb-4 md:mb-6 text-white">莫斯科收货仓服务</h3>
-                <p class="text-lg md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed">您的货物抵达莫斯科后，我们将提供清晰的通知和短期的保管服务。</p>
+                <h3 class="text-2xl md:text-5xl font-black mb-4 md:mb-6 text-white">Услуги склада в Москве</h3>
+                <p class="text-lg md:text-xl text-slate-300 mb-6 md:mb-8 leading-relaxed">После прибытия вашего груза в Москву мы обеспечиваем четкое уведомление и краткосрочное хранение.</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 my-8 md:my-12">
                     <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl">
-                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">核对拍照</div>
-                        <div class="font-bold text-white mb-1 md:mb-2">到货即通知</div>
-                        <div class="text-xs md:text-sm text-slate-400">货物入库后，第一时间拍照并通知您，确保信息透明。</div>
+                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">Проверка и фото</div>
+                        <div class="font-bold text-white mb-1 md:mb-2">Уведомление при прибытии</div>
+                        <div class="text-xs md:text-sm text-slate-400">После размещения на складе сразу фотографируем и сообщаем вам — полная прозрачность.</div>
                     </div>
                     <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl">
-                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">7天存放</div>
-                        <div class="font-bold text-white mb-1 md:mb-2">免费临时仓储</div>
-                        <div class="text-xs md:text-sm text-slate-400">为您提供7天免费存放期，方便您安排时间自提或转运。</div>
+                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">7 дней хранения</div>
+                        <div class="font-bold text-white mb-1 md:mb-2">Бесплатный временный склад</div>
+                        <div class="text-xs md:text-sm text-slate-400">7 дней бесплатного хранения для удобного самовывоза или переотправки.</div>
                     </div>
                     <div class="p-4 md:p-6 bg-blue-900/30 rounded-xl">
-                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">自提/分发</div>
-                        <div class="font-bold text-white mb-1 md:mb-2">灵活处理货物</div>
-                        <div class="text-xs md:text-sm text-slate-400">您可以选择亲自提货，或委托我们协助联系本地物流进行分发。</div>
+                        <div class="text-2xl md:text-3xl font-bold text-blue-400 mb-1 md:mb-2">Самовывоз/распределение</div>
+                        <div class="font-bold text-white mb-1 md:mb-2">Гибкая обработка грузов</div>
+                        <div class="text-xs md:text-sm text-slate-400">Вы можете забрать груз самостоятельно или поручить нам помощь с местной логистикой.</div>
                     </div>
                 </div>
                 <a href="https://t.me/easytoship" target="_blank" class="inline-flex items-center justify-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 btn-tg text-white rounded-xl font-bold text-base md:text-lg w-full">
-                    <i class="fab fa-telegram-plane"></i> 获取莫斯科仓库具体地址
+                    <i class="fab fa-telegram-plane"></i> Получить адрес склада в Москве
                 </a>
             </div>
         </div>
@@ -268,36 +268,36 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div class="order-2 lg:order-1">
-                    <h2 class="text-amber-500 font-bold tracking-widest text-sm mb-2 md:mb-4 uppercase">支付与结算</h2>
-                    <h3 class="text-3xl md:text-5xl font-black mb-6 md:mb-8 text-white">莫斯科<br>用卢布兑换 USDT 支付</h3>
-                    <p class="text-slate-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">为了方便您在莫斯科本地支付运费，我们提供卢布兑换USDT的服务。您可以直接用卢布现金或本地转账给我们，我们按实时汇率将等值 USDT 转入您的钱包，或直接抵扣运费。</p>
+                    <h2 class="text-amber-500 font-bold tracking-widest text-sm mb-2 md:mb-4 uppercase">Оплата и расчеты</h2>
+                    <h3 class="text-3xl md:text-5xl font-black mb-6 md:mb-8 text-white">В Москве<br>оплата рублями с конвертацией в USDT</h3>
+                    <p class="text-slate-300 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">Для удобства оплаты в Москве мы предоставляем услугу обмена рублей на USDT. Вы можете оплатить наличными рублями или переводом, мы по текущему курсу переведем эквивалент в USDT на ваш кошелек или зачтем в счет оплаты доставки.</p>
                     <ul class="space-y-3 md:space-y-4 mb-6 md:mb-10">
-                        <li class="flex items-start gap-3"><i class="fas fa-money-bill-wave text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">接受卢布现金或银行转账</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-clock text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">按交易时实时汇率计算</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-user-tie text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">可安排线下见面交易，安全直接</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-money-bill-wave text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">Принимаем наличные рубли или банковский перевод</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-clock text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">Расчет по актуальному курсу на момент сделки</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-user-tie text-amber-500 mt-1"></i> <span class="text-slate-300 text-sm md:text-base">Возможна личная встреча для безопасной сделки</span></li>
                     </ul>
                     <a href="https://t.me/easytoship" target="_blank" class="px-6 py-4 md:px-10 md:py-5 btn-tg text-white rounded-xl font-bold text-base md:text-lg flex items-center justify-center gap-3 w-full">
-                        <i class="fab fa-telegram-plane"></i> 查询今日卢布兑USDT汇率
+                        <i class="fab fa-telegram-plane"></i> Узнать курс рубля к USDT
                     </a>
                 </div>
                 <div class="order-1 lg:order-2 flex justify-center mb-8 md:mb-0">
                     <div class="glass-card p-6 md:p-10 rounded-2xl md:rounded-3xl max-w-md w-full backdrop-blur-xl border-amber-500/20">
                         <div class="text-center mb-6 md:mb-8">
                             <i class="fas fa-credit-card text-3xl md:fa-4x text-amber-500 mb-3 md:mb-4"></i>
-                            <h4 class="text-xl md:text-2xl font-bold text-amber-400">支付流程</h4>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-400">Процесс оплаты</h4>
                         </div>
                         <div class="space-y-4 md:space-y-6">
                             <div class="flex items-center gap-3 md:gap-4">
                                 <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm md:text-base">1</div>
-                                <div><div class="font-bold text-white text-sm md:text-base">确认运费</div><div class="text-xs md:text-sm text-slate-400">根据您的货物信息计算运费（美元/USDT）。</div></div>
+                                <div><div class="font-bold text-white text-sm md:text-base">Подтверждение стоимости доставки</div><div class="text-xs md:text-sm text-slate-400">Рассчитываем стоимость доставки (в долларах/USDT) на основе информации о грузе.</div></div>
                             </div>
                             <div class="flex items-center gap-3 md:gap-4">
                                 <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm md:text-base">2</div>
-                                <div><div class="font-bold text-white text-sm md:text-base">兑换与支付</div><div class="text-xs md:text-sm text-slate-400">按约定支付美元/USDT，我们接收后即确认支付完成。</div></div>
+                                <div><div class="font-bold text-white text-sm md:text-base">Оплата</div><div class="text-xs md:text-sm text-slate-400">Производите оплату в долларах/USDT по согласованным условиям.</div></div>
                             </div>
                             <div class="flex items-center gap-3 md:gap-4">
                                 <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm md:text-base">3</div>
-                                <div><div class="font-bold text-white text-sm md:text-base">安排发货</div><div class="text-xs md:text-sm text-slate-400">支付确认后，我们立即安排货物从中国发出。</div></div>
+                                <div><div class="font-bold text-white text-sm md:text-base">Отправка груза</div><div class="text-xs md:text-sm text-slate-400">После подтверждения оплаты сразу отправляем груз из Китая.</div></div>
                             </div>
                         </div>
                     </div>
@@ -310,14 +310,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
             <div class="grid lg:grid-cols-4 gap-8 md:gap-16 mb-12 md:mb-20">
                 <div class="col-span-1 lg:col-span-2 space-y-6 md:space-y-8">
-                    <!-- 底部 Logo 与品牌 -->
+                    <!-- Логотип и название в футере -->
                     <div class="flex items-center space-x-2 md:space-x-3">
                         <img src="https://sc04.alicdn.com/kf/Ae6d00c45975e47aa8b7627d25bbbe44c0/268016592/Ae6d00c45975e47aa8b7627d25bbbe44c0.png"
                              alt="easytoship"
                              class="h-6 md:h-8 w-auto">
                         <span class="text-lg md:text-xl font-black italic uppercase tracking-tighter text-white">easy<span class="text-blue-500">to</span>ship</span>
                     </div>
-                    <p class="text-slate-500 max-w-sm text-sm leading-relaxed">提供从中国到莫斯科的直达物流服务，并在莫斯科提供卢布兑换USDT的便利支付方案。</p>
+                    <p class="text-slate-500 max-w-sm text-sm leading-relaxed">Предоставляем прямые логистические услуги из Китая в Москву и удобную схему оплаты с обменом рублей на USDT в Москве.</p>
                     <div class="flex gap-3 md:gap-4">
                         <a href="https://t.me/easytoship" target="_blank" class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all">
                             <i class="fab fa-telegram-plane text-sm md:text-base"></i>
@@ -325,28 +325,28 @@
                     </div>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-4 md:mb-8 uppercase tracking-[0.2em] text-[10px]">中国始发仓</h4>
+                    <h4 class="font-bold text-white mb-4 md:mb-8 uppercase tracking-[0.2em] text-[10px]">Китайские склады отправки</h4>
                     <ul class="space-y-4 md:space-y-6 text-xs">
                         <li>
-                            <span class="text-blue-500 font-bold block mb-1">深圳仓</span>
-                            <span class="text-slate-400">主要收货点，陆运起始仓</span>
+                            <span class="text-blue-500 font-bold block mb-1">Шэньчжэнь</span>
+                            <span class="text-slate-400">Основной пункт приема, склад для автодоставки</span>
                         </li>
                         <li>
-                            <span class="text-blue-500 font-bold block mb-1">香港仓</span>
-                            <span class="text-slate-400">空运起始仓</span>
+                            <span class="text-blue-500 font-bold block mb-1">Гонконг</span>
+                            <span class="text-slate-400">Склад для авиадоставки</span>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold text-white mb-4 md:mb-8 uppercase tracking-[0.2em] text-[10px]">莫斯科服务点</h4>
+                    <h4 class="font-bold text-white mb-4 md:mb-8 uppercase tracking-[0.2em] text-[10px]">Услуги в Москве</h4>
                     <ul class="space-y-4 md:space-y-6 text-xs">
                         <li>
-                            <span class="text-amber-500 font-bold block mb-1">USDT兑换服务</span>
-                            <span class="text-slate-400">支持卢布现金兑换USDT</span>
+                            <span class="text-amber-500 font-bold block mb-1">Обмен USDT</span>
+                            <span class="text-slate-400">Обмен наличных рублей на USDT</span>
                         </li>
                         <li>
-                            <span class="text-blue-500 font-bold block mb-1">莫斯科收货仓</span>
-                            <span class="text-slate-400">货物临时存放与自提点</span>
+                            <span class="text-blue-500 font-bold block mb-1">Московский склад</span>
+                            <span class="text-slate-400">Временное хранение грузов и пункт самовывоза</span>
                         </li>
                     </ul>
                 </div>
@@ -357,17 +357,17 @@
                         <i class="fas fa-calculator"></i>
                     </div>
                     <div>
-                        <div class="font-bold text-xs md:text-sm text-white">快速询价模板</div>
-                        <div class="text-[9px] md:text-[10px] text-slate-500 uppercase tracking-tighter">复制以下信息联系我们，获取精确报价</div>
+                        <div class="font-bold text-xs md:text-sm text-white">Шаблон быстрого запроса</div>
+                        <div class="text-[9px] md:text-[10px] text-slate-500 uppercase tracking-tighter">Скопируйте эту информацию для точного расчета</div>
                     </div>
                 </div>
                 <div class="flex-1 max-w-md w-full mb-4 md:mb-0">
-                    <input id="copyTpl" type="text" readonly value="需求: [纯物流/代采+物流] | 产品: | 重量(kg): | 尺寸(长*宽*高cm): | 运输方式: [空运/陆运]" class="w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm text-slate-300 font-mono outline-none">
+                    <input id="copyTpl" type="text" readonly value="Потребность: [логистика/закупка+логистика] | Груз: | Вес(кг): | Размеры упаковки(Д*Ш*В см): | Способ доставки: [авиа/авто]" class="w-full bg-black/40 border border-white/10 rounded-lg px-3 py-2 md:px-4 md:py-3 text-xs md:text-sm text-slate-300 font-mono outline-none">
                 </div>
-                <button onclick="copyAndInquire()" class="px-4 py-3 md:px-8 md:py-3 btn-tg rounded-lg text-xs font-bold text-white whitespace-nowrap uppercase hover:shadow-lg hover:shadow-blue-500/30 transition-shadow w-full md:w-auto">复制模板并询价</button>
+                <button onclick="copyAndInquire()" class="px-4 py-3 md:px-8 md:py-3 btn-tg rounded-lg text-xs font-bold text-white whitespace-nowrap uppercase hover:shadow-lg hover:shadow-blue-500/30 transition-shadow w-full md:w-auto">Скопировать шаблон и запросить расчет</button>
             </div>
             <div class="pt-6 md:pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-[9px] text-slate-600 uppercase tracking-[0.3em] font-bold">
-                <p>© 2026 easytoship. Все права защищены.</p>
+                <p>© 2023 easytoship. Все права защищены.</p>
                 <div class="flex gap-4 md:gap-8">
                     <span class="text-blue-900">Шэньчжэнь</span>
                     <span class="text-blue-900">Гонконг</span>
@@ -378,16 +378,16 @@
     </footer>
     
     <script>
-        // 移动端菜单切换
+        // Переключение мобильного меню
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
             mobileMenu.classList.toggle('active');
         }
         
-        // 点击菜单按钮
+        // Клик по кнопке меню
         document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
         
-        // 点击页面其他区域关闭菜单
+        // Клик вне меню для его закрытия
         document.addEventListener('click', function(event) {
             const mobileMenu = document.getElementById('mobileMenu');
             const menuBtn = document.getElementById('mobileMenuBtn');
@@ -399,9 +399,9 @@
             }
         });
         
-        // 显示复制提示
+        // Функция для показа уведомления о копировании
         function showCopyNotification(message) {
-            // 创建提示元素
+            // Создаем элемент уведомления
             const notification = document.createElement('div');
             notification.id = 'copy-notification';
             notification.innerHTML = `
@@ -411,10 +411,10 @@
                 </div>
             `;
             
-            // 添加提示到页面
+            // Добавляем уведомление на страницу
             document.body.appendChild(notification);
             
-            // 1.5秒后移除提示
+            // Удаляем уведомление через 1.5 секунды
             setTimeout(() => {
                 if (document.getElementById('copy-notification')) {
                     document.getElementById('copy-notification').remove();
@@ -422,48 +422,48 @@
             }, 1500);
         }
         
-        // 复制代采模板
+        // Копирование шаблона закупки с уведомлением
         function copyTemplate() {
-            const template = '【代采询价】\n产品: \n数量: \n目标型号/规格(可选): ';
+            const template = '【Запрос на закупку】\nТовар: \nКоличество: \nЦелевая модель/спецификация(опционально): ';
             navigator.clipboard.writeText(template).then(() => {
-                // 显示提示
-                showCopyNotification('模板已复制！正在打开Telegram...');
+                // Показать уведомление
+                showCopyNotification('Шаблон скопирован! Открываем Telegram...');
                 
-                // 短暂延迟后打开Telegram
+                // Небольшая задержка перед открытием Telegram
                 setTimeout(() => {
                     window.open('https://t.me/easytoship', '_blank');
                 }, 800);
             }).catch(err => {
-                console.error('复制失败: ', err);
-                // 如果复制失败，仍然打开Telegram
+                console.error('Ошибка копирования: ', err);
+                // Если копирование не удалось, все равно открываем Telegram
                 window.open('https://t.me/easytoship', '_blank');
             });
         }
         
-        // 复制询价模板
+        // Копирование шаблона запроса с уведомлением
         function copyAndInquire() {
             const input = document.getElementById('copyTpl');
             navigator.clipboard.writeText(input.value).then(() => {
-                // 显示提示
-                showCopyNotification('模板已复制！正在打开Telegram...');
+                // Показать уведомление
+                showCopyNotification('Шаблон скопирован! Открываем Telegram...');
                 
-                // 短暂延迟后打开Telegram
+                // Небольшая задержка перед открытием Telegram
                 setTimeout(() => {
                     window.open('https://t.me/easytoship', '_blank');
                 }, 800);
             }).catch(err => {
-                console.error('复制失败: ', err);
-                // 如果复制失败，仍然打开Telegram
+                console.error('Ошибка копирования: ', err);
+                // Если копирование не удалось, все равно открываем Telegram
                 window.open('https://t.me/easytoship', '_blank');
             });
         }
         
-        // 防止手势缩放
+        // Предотвращение масштабирования жестами
         document.addEventListener('gesturestart', function (e) {
             e.preventDefault();
         });
         
-        // 平滑滚动
+        // Плавная прокрутка
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -473,7 +473,7 @@
                 
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    // 如果是移动端，先关闭菜单
+                    // На мобильных устройствах закрываем меню
                     if (window.innerWidth < 768) {
                         toggleMobileMenu();
                     }
