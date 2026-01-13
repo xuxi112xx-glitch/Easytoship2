@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://easytoship.ru/sitemap.xml
-Sitemap: https://easytoship.ru/sitemap.html
+Sitemap: https://raw.githubusercontent.com/xuxi112xx-glitch/Easytoship2/refs/heads/main/sitemap.xml
+Sitemap: https://raw.githubusercontent.com/xuxi112xx-glitch/Easytoship2/refs/heads/main/sitemap.html
 
 # Yandex 特定指令
 User-agent: Yandex
