@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта сайта | easytoship | Логистика из Китая в Москву</title>
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --dark-bg: #0f172a;
+            --light-text: #f8fafc;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .sitemap-section {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .sitemap-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-blue);
+        }
+        
+        .section-title {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(37, 99, 235, 0.3);
+        }
+        
+        .page-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .page-item {
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .page-item:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+        
+        .page-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+        
+        .page-link:hover {
+            color: #60a5fa;
+        }
+        
+        .icon {
+            margin-right: 10px;
+            color: #60a5fa;
+        }
+        
+        .last-updated {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            margin-left: 26px;
+        }
+        
+        .priority {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+        
+        .xml-link {
+            background: var(--primary-blue);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+        
+        .xml-link:hover {
+            background: #1d4ed8;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+        
+        @media (max-width: 768px) {
+            .sitemap-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Карта сайта easytoship</h1>
+            <p class="subtitle">Полный список всех страниц и разделов сайта для удобной навигации и SEO-оптимизации</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="sitemap-grid">
+            <!-- Главные страницы -->
+            <section class="sitemap-section">
+                <h2 class="section-title">Основные страницы</h2>
+                <ul class="page-list">
+                    <li class="page-item">
+                        <a href="/" class="page-link">
+                            <span class="icon">🏠</span>
+                            <span>Главная страница</span>
+                            <span class="priority">1.0</span>
+                        </a>
+                        <div class="last-updated">Обновлено: 15.01.2024</div>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Услуги -->
+            <section class="sitemap-section">
+                <h2 class="section-title">Наши услуги</h2>
+                <ul class="page-list">
+                    <li class="page-item">
+                        <a href="/#logistics" class="page-link">
+                            <span class="icon">✈️</span>
+                            <span>Логистика Китай-Москва</span>
+                            <span class="priority">0.9</span>
+                        </a>
+                        <div class="last-updated">Тарифы и условия доставки</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="/#procurement" class="page-link">
+                            <span class="icon">🛒</span>
+                            <span>Закупка в Китае</span>
+                            <span class="priority">0.9</span>
+                        </a>
+                        <div class="last-updated">Электроника и товары</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="/#customs" class="page-link">
+                            <span class="icon">📋</span>
+                            <span>Белая таможня</span>
+                            <span class="priority">0.9</span>
+                        </a>
+                        <div class="last-updated">Двойное очищение + налоги</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="/#warehouse" class="page-link">
+                            <span class="icon">🏢</span>
+                            <span>Склад в Москве</span>
+                            <span class="priority">0.9</span>
+                        </a>
+                        <div class="last-updated">Хранение и распределение</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="/#exchange" class="page-link">
+                            <span class="icon">💱</span>
+                            <span>Обмен RUB/USDT</span>
+                            <span class="priority">0.8</span>
+                        </a>
+                        <div class="last-updated">Оплата в рублях с конвертацией</div>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Контакты -->
+            <section class="sitemap-section">
+                <h2 class="section-title">Контакты и связь</h2>
+                <ul class="page-list">
+                    <li class="page-item">
+                        <a href="https://t.me/easytoship_logistics" target="_blank" class="page-link">
+                            <span class="icon">📱</span>
+                            <span>Telegram канал</span>
+                            <span class="priority">0.7</span>
+                        </a>
+                        <div class="last-updated">Основной канал связи</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="https://vk.com/id894754359" target="_blank" class="page-link">
+                            <span class="icon">👥</span>
+                            <span>ВКонтакте</span>
+                            <span class="priority">0.6</span>
+                        </a>
+                        <div class="last-updated">Группа ВКонтакте</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="tel:+79252044092" class="page-link">
+                            <span class="icon">📞</span>
+                            <span>Телефон: +7 (925) 204-40-92</span>
+                        </a>
+                        <div class="last-updated">Российский офис</div>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- Информация для поисковиков -->
+            <section class="sitemap-section">
+                <h2 class="section-title">Для поисковых систем</h2>
+                <ul class="page-list">
+                    <li class="page-item">
+                        <a href="/sitemap.xml" class="page-link">
+                            <span class="icon">🗺️</span>
+                            <span>XML Sitemap</span>
+                        </a>
+                        <div class="last-updated">Для Yandex и Google</div>
+                    </li>
+                    <li class="page-item">
+                        <a href="/robots.txt" class="page-link">
+                            <span class="icon">🤖</span>
+                            <span>Robots.txt</span>
+                        </a>
+                        <div class="last-updated">Инструкции для роботов</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="/sitemap.xml" class="xml-link">📄 Скачать XML Sitemap (для поисковиков)</a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023-2024 easytoship. Все права защищены.</p>
+            <p>Логистика из Китая в Москву • Склад в Москве • Оплата USDT</p>
+            <p>Для индексации в Yandex Webmaster добавьте этот sitemap в панели управления.</p>
+        </div>
+    </footer>
+</body>
+</html>
