@@ -405,6 +405,7 @@
                 <a href="#ddp" class="text-slate-300 hover:text-white transition">DDP доставка</a>
                 <a href="#avia" class="text-slate-300 hover:text-white transition">Авиа</a>
                 <a href="#avto" class="text-slate-300 hover:text-white transition">Авто</a>
+                <a href="#calculator" class="text-yellow-400 hover:text-yellow-300 transition">Калькулятор</a>
                 <a href="#tamozhnya" class="text-slate-300 hover:text-white transition">Таможня</a>
                 <a href="#sklad" class="text-slate-300 hover:text-white transition">Склад</a>
                 <a href="#oplata" class="text-yellow-400 hover:text-yellow-300 transition">Оплата USDT</a>
@@ -419,6 +420,7 @@
                 <a href="#ddp" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">DDP доставка</a>
                 <a href="#avia" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Авиадоставка</a>
                 <a href="#avto" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Автодоставка</a>
+                <a href="#calculator" class="text-yellow-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Калькулятор</a>
                 <a href="#tamozhnya" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Таможня</a>
                 <a href="#sklad" class="text-white hover:text-blue-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Склад Москва</a>
                 <a href="#oplata" class="text-yellow-400 py-3 px-4 text-lg border-b border-white/5" onclick="toggleMobileMenu()">Оплата USDT</a>
@@ -557,6 +559,8 @@
                     <span class="text-slate-600">·</span>
                     <a href="#avto" class="text-blue-400 hover:text-blue-300 transition">Автодоставка</a>
                     <span class="text-slate-600">·</span>
+                    <a href="#calculator" class="text-yellow-400 hover:text-yellow-300 transition">Калькулятор</a>
+                    <span class="text-slate-600">·</span>
                     <a href="#tamozhnya" class="text-blue-400 hover:text-blue-300 transition">Таможенное оформление</a>
                     <span class="text-slate-600">·</span>
                     <a href="#sklad" class="text-blue-400 hover:text-blue-300 transition">Склад в Москве</a>
@@ -677,7 +681,52 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- ========== БЛОК 4: ТАМОЖНЯ ========== -->
+    <!-- ========== БЛОК 4: КАЛЬКУЛЯТОР (НОВОЕ РАСПОЛОЖЕНИЕ — ПОСЛЕ АВТО) ========== -->
+    <!-- ============================================================ -->
+    <section id="calculator" class="section-container py-8 md:py-16 px-4 sm:px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="section-border border-blue-500/30">
+                <div class="text-center mb-6">
+                    <div class="badge badge-blue mb-3">📊 Калькулятор</div>
+                    <h2 class="section-title text-white">Рассчитайте стоимость доставки из Китая в Россию</h2>
+                    <p class="section-subtitle">Введите вес груза и выберите способ доставки</p>
+                </div>
+
+                <div class="grid sm:grid-cols-3 gap-4 items-end">
+                    <div>
+                        <label for="weightInput" class="block text-sm font-medium text-slate-300 mb-1">Вес (кг)</label>
+                        <input type="number" id="weightInput" min="1" step="0.5" value="10" class="calculator-input">
+                    </div>
+                    <div>
+                        <label for="methodSelect" class="block text-sm font-medium text-slate-300 mb-1">Способ доставки</label>
+                        <select id="methodSelect" class="calculator-input">
+                            <option value="air">✈️ Авиа (38 $/кг)</option>
+                            <option value="truck">🚛 Авто (5 $/кг)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button id="calcBtn" class="btn-primary w-full rounded-xl font-bold text-white">
+                            <i class="fab fa-telegram-plane mr-2"></i>Получить расчёт
+                        </button>
+                    </div>
+                </div>
+
+                <div id="resultBox" class="result-box mt-6 hidden">
+                    <div class="text-sm text-slate-400">Ориентировочная стоимость DDP доставки</div>
+                    <div class="price" id="totalPrice">0 $</div>
+                    <div class="text-sm text-slate-300 mt-1" id="deliveryTime">Срок: 5-7 дней</div>
+                    <div class="text-xs text-slate-500 mt-2">* Итоговая стоимость может меняться в зависимости от объёмного веса и дополнительных услуг</div>
+                </div>
+
+                <div class="mt-4 text-center text-xs text-slate-500">
+                    <i class="fas fa-info-circle mr-1"></i> Минимальный вес: авиа — 10 кг, авто — 100 кг
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ========== БЛОК 5: ТАМОЖНЯ ========== -->
     <!-- ============================================================ -->
     <section id="tamozhnya" class="section-container py-8 md:py-16 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
@@ -722,13 +771,15 @@
 
                 <div class="mt-6 text-center text-sm">
                     <a href="#ddp" class="text-blue-400 hover:text-blue-300 transition">← Вернуться к DDP доставке</a>
+                    <span class="text-slate-600 mx-2">|</span>
+                    <a href="#calculator" class="text-yellow-400 hover:text-yellow-300 transition">Калькулятор →</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================================ -->
-    <!-- ========== БЛОК 5: СКЛАД ========== -->
+    <!-- ========== БЛОК 6: СКЛАД ========== -->
     <!-- ============================================================ -->
     <section id="sklad" class="section-container py-8 md:py-16 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
@@ -791,7 +842,7 @@
     </section>
 
     <!-- ============================================================ -->
-    <!-- ========== БЛОК 6: ОПЛАТА ========== -->
+    <!-- ========== БЛОК 7: ОПЛАТА ========== -->
     <!-- ============================================================ -->
     <section id="oplata" class="section-container py-8 md:py-16 px-4 sm:px-6">
         <div class="max-w-7xl mx-auto">
@@ -856,52 +907,6 @@
                     <a href="#sklad" class="text-blue-400 hover:text-blue-300 transition">← Склад в Москве</a>
                     <span class="text-slate-600 mx-2">|</span>
                     <a href="#ddp" class="text-blue-400 hover:text-blue-300 transition">Вернуться к DDP →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- ========== БЛОК 7: КАЛЬКУЛЯТОР (с изменённой кнопкой) ========== -->
-    <!-- ============================================================ -->
-    <section id="calculator" class="section-container py-8 md:py-16 px-4 sm:px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="section-border border-blue-500/30">
-                <div class="text-center mb-6">
-                    <div class="badge badge-blue mb-3">📊 Калькулятор</div>
-                    <h2 class="section-title text-white">Рассчитайте стоимость доставки из Китая в Россию</h2>
-                    <p class="section-subtitle">Введите вес груза и выберите способ доставки</p>
-                </div>
-
-                <div class="grid sm:grid-cols-3 gap-4 items-end">
-                    <div>
-                        <label for="weightInput" class="block text-sm font-medium text-slate-300 mb-1">Вес (кг)</label>
-                        <input type="number" id="weightInput" min="1" step="0.5" value="10" class="calculator-input">
-                    </div>
-                    <div>
-                        <label for="methodSelect" class="block text-sm font-medium text-slate-300 mb-1">Способ доставки</label>
-                        <select id="methodSelect" class="calculator-input">
-                            <option value="air">✈️ Авиа (38 $/кг)</option>
-                            <option value="truck">🚛 Авто (5 $/кг)</option>
-                        </select>
-                    </div>
-                    <div>
-                        <!-- Изменённая кнопка: "Получить расчёт в Telegram" -->
-                        <button id="calcBtn" class="btn-primary w-full rounded-xl font-bold text-white">
-                            <i class="fab fa-telegram-plane mr-2"></i>Получить расчёт
-                        </button>
-                    </div>
-                </div>
-
-                <div id="resultBox" class="result-box mt-6 hidden">
-                    <div class="text-sm text-slate-400">Ориентировочная стоимость DDP доставки</div>
-                    <div class="price" id="totalPrice">0 $</div>
-                    <div class="text-sm text-slate-300 mt-1" id="deliveryTime">Срок: 5-7 дней</div>
-                    <div class="text-xs text-slate-500 mt-2">* Итоговая стоимость может меняться в зависимости от объёмного веса и дополнительных услуг</div>
-                </div>
-
-                <div class="mt-4 text-center text-xs text-slate-500">
-                    <i class="fas fa-info-circle mr-1"></i> Минимальный вес: авиа — 10 кг, авто — 100 кг
                 </div>
             </div>
         </div>
@@ -1140,12 +1145,10 @@
 
         // === Универсальная функция для копирования + уведомления + перехода в Telegram ===
         function copyWithTelegram(text, notificationMessage) {
-            // Копируем текст
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(text).then(() => {
                     showNotification(notificationMessage || '✅ Скопировано! Переходим в Telegram...');
                 }).catch(() => {
-                    // fallback
                     fallbackCopy(text);
                 });
             } else {
@@ -1169,9 +1172,7 @@
             document.body.removeChild(textarea);
         }
 
-        // === Показ уведомления на 3 секунды, затем переход в Telegram ===
         function showNotification(message) {
-            // Удаляем старые уведомления
             const old = document.querySelector('.copy-notification');
             if (old) old.remove();
 
@@ -1180,14 +1181,13 @@
             div.innerHTML = `<i class="fas fa-check-circle text-xl"></i><span class="font-bold text-sm">${message}</span>`;
             document.body.appendChild(div);
 
-            // Через 3 секунды убираем уведомление и переходим в Telegram
             setTimeout(() => {
                 if (div.parentNode) div.remove();
                 window.open('https://t.me/easytoship_logistics', '_blank');
             }, 3000);
         }
 
-        // === Калькулятор: расчёт + копирование данных + переход в Telegram ===
+        // === Калькулятор ===
         document.addEventListener('DOMContentLoaded', function() {
             const weightInput = document.getElementById('weightInput');
             const methodSelect = document.getElementById('methodSelect');
@@ -1201,7 +1201,6 @@
                 truck: { price: 5, time: '20-25 дней', min: 100, label: 'Авто' }
             };
 
-            // Функция расчёта и получения данных
             function calculateAndGetData() {
                 const weight = parseFloat(weightInput.value);
                 if (isNaN(weight) || weight <= 0) {
@@ -1215,7 +1214,6 @@
                     return null;
                 }
                 const total = weight * rate.price;
-                // Показываем результат
                 totalPrice.textContent = total.toFixed(2) + ' $';
                 deliveryTime.textContent = 'Срок: ' + rate.time;
                 resultBox.classList.remove('hidden');
@@ -1228,35 +1226,27 @@
                 };
             }
 
-            // Обработчик кнопки "Получить расчёт"
             calcBtn.addEventListener('click', function() {
                 const data = calculateAndGetData();
                 if (!data) return;
 
-                // Формируем текст для копирования
                 const text = `Вес: ${data.weight} кг\nСпособ: ${data.methodLabel}\nСтоимость: ${data.total.toFixed(2)} $\nСрок: ${data.time}`;
-                // Копируем и переходим в Telegram с уведомлением
                 copyWithTelegram(text, '✅ Данные скопированы! Переходим в Telegram для расчёта...');
             });
 
-            // Автозапуск расчёта при загрузке для демонстрации
             setTimeout(function() {
                 const data = calculateAndGetData();
-                if (data) {
-                    // просто показываем результат без копирования
-                }
+                if (data) {}
             }, 300);
         });
 
-        // === Копирование шаблона (copyAndInquire) ===
+        // === Копирование шаблона ===
         function copyAndInquire() {
             const input = document.getElementById('copyTpl');
             const text = input.value;
             copyWithTelegram(text, '✅ Шаблон скопирован! Переходим в Telegram...');
         }
 
-        // === Копирование шаблона закупки (используется в блоке procurement) ===
-        // Обратите внимание: в блоке закупки есть кнопка "Запрос на закупку", которая вызывает copyProcurementTemplate
         function copyProcurementTemplate() {
             const template = '【Запрос на закупку】\nТовар: \nКоличество: \nЦелевая модель/спецификация(опционально): \nБюджет: \nКомиссия за закупку: 1% от суммы инвойса';
             copyWithTelegram(template, '✅ Шаблон закупки скопирован! Переходим в Telegram...');
@@ -1279,7 +1269,6 @@
             });
         });
 
-        // === Блокировка масштабирования ===
         document.addEventListener('gesturestart', e => e.preventDefault());
     </script>
 </body>
